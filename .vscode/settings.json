@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.port": 5500,
+  "files.autoSave": "onFocusChange",
+  "emmet.includeLanguages": {
+    "javascript": "html"
+  },
+  "html.format.indentInnerHtml": true,
+  "css.format.enable": true
+}

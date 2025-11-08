@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dojo Do Ryu - Academia de Karatê</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo à esquerda -->
+          <div class="logo-img">
+            <img src="images/logo.jpeg" alt="Dojo Do Ryu" />
+          </div>
+
+          <!-- Nome centralizado -->
+          <div class="logo-center">
+            <h2>DOJO Do Ryu</h2>
+          </div>
+
+          <!-- Menu à direita -->
+          <ul class="nav-menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#matricula">Matrícula</a></li>
+            <li><a href="#horarios">Horários</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>DOJO Do Ryu</h1>
+        <p>Excelência em Artes Marciais desde 1995</p>
+        <p>Descubra o poder interior através do Karatê</p>
+        <div class="hero-buttons">
+          <a href="#matricula" class="btn btn-primary">Faça sua Matrícula</a>
+          <a href="#horarios" class="btn btn-secondary">Ver Horários</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Matrícula -->
+    <section id="matricula" class="section">
+      <div class="container">
+        <h2 class="section-title">Faça sua Matrícula</h2>
+        <div class="mensalidade-info">
+          <div class="mensalidade-card">
+            <h3>Mensalidade Única</h3>
+            <div class="preco">R$ 70,00<span>/mês</span></div>
+            <p class="vencimento">Vencimento até o dia 10 de cada mês</p>
+          </div>
+        </div>
+        <div class="form-container">
+          <form id="matricula-form" class="matricula-form">
+            <!-- Dados Pessoais -->
+            <div class="form-section">
+              <h3>Dados Pessoais</h3>
+
+              <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+
+              <div class="form-group">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" required />
+              </div>
+
+              <div class="form-group">
+                <label for="endereco">Endereço Completo</label>
+                <input type="text" id="endereco" name="endereco" required />
+              </div>
+
+              <div class="form-group">
+                <label for="telefone">Telefone Principal</label>
+                <input type="tel" id="telefone" name="telefone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="telefone_emergencia"
+                  >Telefone para Emergência</label
+                >
+                <input
+                  type="tel"
+                  id="telefone_emergencia"
+                  name="telefone_emergencia"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <!-- Informações do Aluno -->
+            <div class="form-section">
+              <h3>Informações do Aluno</h3>
+
+              <div class="form-group">
+                <label for="idade">Faixa Etária</label>
+                <select id="idade" name="idade" required>
+                  <option value="">Selecione sua faixa etária</option>
+                  <option value="3-7">3 a 7 anos</option>
+                  <option value="8-12">8 a 12 anos</option>
+                  <option value="13-17">13 a 17 anos</option>
+                  <option value="18+">18 anos ou mais</option>
+                  <option value="3-9">3 a 9 anos (Ter/Qui)</option>
+                  <option value="10-17">10 a 17 anos (Ter/Qui)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="experiencia">Experiência Anterior</label>
+                <select id="experiencia" name="experiencia" required>
+                  <option value="">Selecione</option>
+                  <option value="nenhuma">Nenhuma</option>
+                  <option value="iniciante">Iniciante (até 1 ano)</option>
+                  <option value="intermediario">
+                    Intermediário (1-3 anos)
+                  </option>
+                  <option value="avancado">Avançado (+3 anos)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Seção do Responsável (aparece apenas para menores de 18 anos) -->
+            <div
+              class="form-section"
+              id="responsavel-section"
+              style="display: none"
+            >
+              <h3>Dados do Responsável</h3>
+
+              <div class="form-group">
+                <label for="responsavel_nome"
+                  >Nome Completo do Responsável</label
+                >
+                <input
+                  type="text"
+                  id="responsavel_nome"
+                  name="responsavel_nome"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="responsavel_parentesco">Parentesco</label>
+                <input
+                  type="text"
+                  id="responsavel_parentesco"
+                  name="responsavel_parentesco"
+                  placeholder="Ex: Pai, Mãe, Avô, etc."
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="responsavel_telefone"
+                  >Telefone do Responsável</label
+                >
+                <input
+                  type="tel"
+                  id="responsavel_telefone"
+                  name="responsavel_telefone"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="responsavel_email">E-mail do Responsável</label>
+                <input
+                  type="email"
+                  id="responsavel_email"
+                  name="responsavel_email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="termos" name="termos" required />
+              <label for="termos">Aceito os termos e condições</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large">
+              Enviar Matrícula
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Horários -->
+    <section id="horarios" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Horários das Aulas</h2>
+        <div class="horarios-grid">
+          <div class="horario-card">
+            <h3>Segunda - Quarta - Sexta</h3>
+            <div class="horario-item">
+              <h4>Idade: 8 a 12 anos</h4>
+              <p>17:30 às 18:30</p>
+            </div>
+            <div class="horario-item">
+              <h4>Idade: 3 a 7 anos</h4>
+              <p>18:45 às 19:45</p>
+            </div>
+            <div class="horario-item">
+              <h4>Idade: a partir de 13 anos</h4>
+              <p>20:00 às 21:00</p>
+            </div>
+          </div>
+
+          <div class="horario-card">
+            <h3>Terça - Quinta</h3>
+            <div class="horario-item">
+              <h4>Idade: 3 a 9 anos</h4>
+              <p>17:30 às 19:00</p>
+            </div>
+            <div class="horario-item">
+              <h4>Idade: a partir de 10 anos</h4>
+              <p>19:15 às 20:45</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Galeria -->
+    <section id="galeria" class="section">
+      <div class="container">
+        <h2 class="section-title">Nossa Galeria</h2>
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="atletas">
+            Atletas
+          </button>
+          <button class="filter-btn" data-filter="espaco">Espaço</button>
+          <button class="filter-btn" data-filter="professores">
+            Professores
+          </button>
+        </div>
+        <div class="gallery-grid">
+          <!-- Atletas -->
+          <div class="gallery-item" data-category="atletas">
+            <img src="images/atletas/atleta1.jpg" alt="Atleta em competição" />
+            <div class="gallery-overlay">
+              <h3>Campeonato Regional</h3>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="atletas">
+            <img src="images/atletas/atleta2.jpg" alt="Treino em grupo" />
+            <div class="gallery-overlay">
+              <h3>Treino Coletivo</h3>
+            </div>
+          </div>
+
+          <!-- Espaço -->
+          <div class="gallery-item" data-category="espaco">
+            <img src="images/espaco/dojo1.jpg" alt="Nosso dojo" />
+            <div class="gallery-overlay">
+              <h3>Dojo Principal</h3>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="espaco">
+            <img src="images/espaco/dojo2.jpg" alt="Área de vestiário" />
+            <div class="gallery-overlay">
+              <h3>Vestiários</h3>
+            </div>
+          </div>
+
+          <!-- Professores (3 Senseis) -->
+          <div class="gallery-item" data-category="professores">
+            <img src="images/professores/sensei1.jpeg" alt="Sensei Julio" />
+            <div class="gallery-overlay">
+              <h3>Sensei Julio - Faixa Preta 3º Dan</h3>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="professores">
+            <img src="images/professores/sensei2.jpg" alt="Sensei Leonardo" />
+            <div class="gallery-overlay">
+              <h3>Sensei Leonardo - Faixa Preta 3º Dan</h3>
+            </div>
+          </div>
+          <div class="gallery-item" data-category="professores">
+            <img src="images/professores/sensei3.jpg" alt="Sensei Allyson" />
+            <div class="gallery-overlay">
+              <h3>Sensei Allysson - Faixa Preta 1º Dan</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Entre em Contato</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Telefone</h3>
+                <p>
+                  <a
+                    href="tel:5585999906140"
+                    style="color: inherit; text-decoration: none"
+                    >(85) 99990-6140</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="tel:558588807945"
+                    style="color: inherit; text-decoration: none"
+                    >(85) 8880-7945</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>E-mail</h3>
+                <p>
+                  <a
+                    href="mailto:julio.feitosa@hotmail.com"
+                    style="color: inherit; text-decoration: none"
+                    >julio.feitosa@hotmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Endereço</h3>
+                <p>
+                  Av Deputado Castelo de Castro 266 altos <br />conjunto São
+                  Cristóvão Bairro Jangurussu<br />CEP:60866-681
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Horários</h3>
+                <p>Segunda a Sexta: 6h-21h</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contato-form">
+              <div class="form-group">
+                <label for="contato-nome">Nome</label>
+                <input type="text" id="contato-nome" name="nome" required />
+              </div>
+              <div class="form-group">
+                <label for="contato-email">E-mail</label>
+                <input type="email" id="contato-email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="contato-telefone">Telefone</label>
+                <input
+                  type="tel"
+                  id="contato-telefone"
+                  name="telefone"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contato-mensagem">Mensagem</label>
+                <textarea
+                  id="contato-mensagem"
+                  name="mensagem"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>DOJO DO RYU</h3>
+            <p>
+              Excelência em Artes Marciais há mais de 25 anos. Formando não
+              apenas atletas, mas cidadãos de caráter.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="#home">Início</a></li>
+              <li><a href="#matricula">Matrícula</a></li>
+              <li><a href="#horarios">Horários</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a href="https://facebook.com/seu-dojo" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://instagram.com/seu-dojo" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://wa.me/5585999906140" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="https://youtube.com/seu-canal" target="_blank"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Academia De Karate Do Ryu. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
